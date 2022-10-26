@@ -1,0 +1,134 @@
+  .titulorepllantas {
+    color: #fff;
+    width: 50%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .texto-repllanta {
+    padding-left: 1%;
+  }
+  .texto-repllanta li {
+    color: #fff;
+    font-size: 1.5vw;
+    margin-top: 1vw;
+    text-align: justify;
+  }
+  
+  .titulorventllantas {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    color: #fff;
+  }
+  
+  .llantasdiv h3 {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    background: rgba(255, 0, 0, 0.7);
+    color: #fff;
+    font-size: 2.5vw;
+  }
+  
+  .ventaDeLlantas {
+    padding-bottom: 10px;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .item {
+    border: 2px solid rgba(255, 0, 0);
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .item-title, .modal-title, .modal-body {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  .item-image {
+    height: 30vw;
+    width: 30vw;
+    margin-inline: auto;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 0, 0);
+  }
+  
+  .item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 15px;
+  }
+  
+  .item-details > .item-price {
+    color: #fff;
+    margin: 0;
+  }
+  
+  /* ? SHOPPING CART */
+  .shopping-cart-items {
+    padding: 20px 0px;
+    
+  }
+  
+  .text-center, .row{
+    color: #fff;
+  }
+  
+  .shopping-cart-header {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .shopping-cart-image {
+    max-width: 80px;
+    border-radius: 20px;
+  }
+  
+  .shopping-cart-quantity-input {
+    max-width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eee;
+    padding: 5px;
+  }
+  
+  .shopping-cart-total {
+    min-height: 96px;
+  }
+  
+  .price{ 
+    padding-left: 25px;
+  }
+  
+  .comprarButton{
+    margin-left: auto;
+  }
+  
+  .modal-header{
+    border-bottom: 2px solid #fff;
+  }
+  
+  .mail1, .contr1{
+    margin-left: 8%;
+  }
+  
+  .form-outline  .form-control~.form-label{
+    color: rgb(180, 180, 180);
+  }
+  
+  .modal-content{
+    background-color: rgb(14, 14, 14);
+    border: 2px solid rgba(255, 0, 0);
+  }
+  
+  .swal2-html-container{
+    display: flex!important;
+    justify-content: center!important;
+  }
+  
