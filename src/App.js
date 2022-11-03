@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div>
       <Navbar conBoton={true} color={"#ddd"} funcionLogin={funcionLogin} />
-      <ItemListContainer greeting={"prueba"}/>
+      <ItemListContainer greeting={"prueba"} />
       <BodyApp />
       <Footer />
     </div>
