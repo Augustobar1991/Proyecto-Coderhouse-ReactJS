@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
+import "../styles/body.css";
 
-export default function ItemCount({ ini, max, addItem }) {
+export default function ItemCount({ ini, max, addItem}) {
   const [count, setCount] = useState(ini);
   function restar() {
     if (count >= 2) {
@@ -17,11 +19,11 @@ export default function ItemCount({ ini, max, addItem }) {
   return (
     <div className="botonitemcart">
       <div>
-            <button onClick={restar}>-</button>
+            <Button className="botonn" variant="outlined" onClick={restar}>-</Button>
             {count}
-            <button onClick={sumar}>+</button>
+            <Button className="botonn" variant="outlined" onClick={sumar}>+</Button>
       </div>
-      <button onClick={() => addItem(count)}>AGREGAR</button>
+      <Button variant="contained" onClick={() => addItem(count)}>AGREGAR</Button>
       
     </div>
   );

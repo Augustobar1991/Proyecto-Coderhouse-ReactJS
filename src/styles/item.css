@@ -1,0 +1,40 @@
+.bordeitem{
+    border: 3px solid red;
+    margin: 10px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.itemcart{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.botoncomprar{
+    display: flex;
+    justify-content: center;
+}
+
+.MuiPaper-root.MuiPaper-elevation {
+    background-color: lightgray;
+  }
+  
+  .card {
+    margin: 20px;
+    height: 550px;
+  }
+  
+  .showDetail {
+    color: white;
+    background-color: black;
+  }
+
+.botonn{
+    min-width:auto!important;
+    padding: 3px 5px!important;
+}
+
+.botonitemcart div button{
+    margin: 7px;
+}

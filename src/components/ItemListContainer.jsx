@@ -27,7 +27,7 @@ export default function ItemListContainer({ greeting }) {
 
   return (
     <div style={{ margin: "20px" }}>
-      <ItemList productos={productos} />;
+      <ItemList productos={productos} />
     </div>
   );
 }
