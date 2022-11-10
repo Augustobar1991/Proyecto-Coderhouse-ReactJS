@@ -3,7 +3,7 @@ import "../styles/footer.css";
 
 export default function Footer() {
   return (
-    <footer className="container">
+    <footer className="containerfooter">
     <div className="flecha"><a href="#" ><i className="bi bi-arrow-up-circle-fill flecha1"></i></a></div>
     <div className="row containerp"/>
     <div className="futer">

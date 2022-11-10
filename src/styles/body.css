@@ -1,3 +1,81 @@
+  .bordeitem{
+    border: 3px solid red;
+    margin: 10px;
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  .cartitem{
+    border: 2px solid red;
+     margin: 30px;
+     color: #fff;
+     display: flex;
+     flex-direction: column;
+     background-color: rgb(14, 14, 14);
+     border-radius: 20px;
+  }
+
+  .cartsubitem{
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+
+  .cartpreciotem{
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .cartdetalletem{
+    display: flex;
+    align-items: center;
+  }
+  .cartdetalletem div{
+    margin: 15px; 
+  }
+
+  .idprod{
+    color: rgba(161, 161, 161, 0.375);
+    font-size: small;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cartitem img{
+    width: 15vw;
+  }
+
+  .cartbuytem{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .tituloh2{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .botonitemcart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .botonitemcart div button{
+    margin: 10px;
+  }
+  
   .titulorepllantas {
     color: #fff;
     width: 50%;
@@ -17,8 +95,6 @@
   }
   
   .titulorventllantas {
-    padding-top: 3vw;
-    padding-bottom: 3vw;
     color: #fff;
   }
   

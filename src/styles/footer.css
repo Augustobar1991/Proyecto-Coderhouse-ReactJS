@@ -1,6 +1,7 @@
 /* -------footer------- */
-.container {
+.containerfooter {
     max-width: 100%;
+    background-color: rgb(14, 14, 14);
   }
   .container div {
     margin-bottom: 10px;
