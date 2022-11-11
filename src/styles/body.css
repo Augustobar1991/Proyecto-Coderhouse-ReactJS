@@ -16,13 +16,13 @@
   }
 
   .cartpreciotem{
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.14);
     display: flex;
     align-items: center;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 8%;
-    margin-bottom: 8%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -44,6 +44,7 @@
 
   .cartitem img{
     width: 25vw;
+    border-radius: 10px;
   }
 
   .cartbuytem{
@@ -53,7 +54,7 @@
     margin-bottom: 12%;
   }
 
-  .tituloh2{
+  .tituloh1{
     margin: 10px;
     display: flex;
     justify-content: center;
@@ -82,7 +83,7 @@
   }
   .texto-repllanta li {
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     margin-top: 1vw;
     text-align: justify;
   }

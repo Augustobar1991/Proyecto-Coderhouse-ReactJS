@@ -25,12 +25,11 @@ export default function Item({ item }) {
           </Typography>
         </CardContent>
         <div className='botoncomprar'>
-          <Button variant="contained">
-            <Link to={"/item/" + item.id}>Comprar</Link>
+          <Button variant="outlined">
+            <Link to={"/item/" + item.id}>Ver detalles</Link>
           </Button>
         </div>
       </Card>
     </div>
-    //! HACER RETURN QUE ME LLEVE AL ID (DETAIL)
   )
 }

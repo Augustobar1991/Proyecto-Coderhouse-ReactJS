@@ -3,6 +3,7 @@
     margin: 10px;
     border-radius: 20px;
     color: #fff;
+    background-color: rgb(14, 14, 14);
 }
 
 .itemcart{
@@ -14,6 +15,11 @@
 .botoncomprar{
     display: flex;
     justify-content: center;
+}
+
+.css-103chds-MuiPaper-root-MuiCard-root{
+  border-radius: 10px!important;
+  max-width: 270px!important;
 }
 
 .MuiPaper-root.MuiPaper-elevation {

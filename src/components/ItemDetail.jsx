@@ -5,13 +5,13 @@ import "../styles/body.css";
 
 export default function ItemDetail({ producto }) {
   function addItem(x) {
-    alert("quiere agregar " + x * producto.precio);
+    alert("El total saldria: " + x * producto.precio);
   }
   return (
     <div className="cartitem">
       {producto.id ? (
         <>
-            <h2 className="tituloh2">{producto.name}</h2>
+            <h1 className="tituloh1">{producto.name}</h1>
             <div className="idprod">cod. de prod. {producto.id} </div>
         <div className="cartsubitem">
           <div><img src={producto.imagen} alt="" /></div>  
@@ -25,7 +25,7 @@ export default function ItemDetail({ producto }) {
           </div>
           <div className="cartpreciotem">Total: ${producto.precio}</div>
           <div className="cartbuytem">
-              <Button variant="contained" color="success">Comprar</Button>
+              <Button variant="outlined" color="success">Continuar compra</Button>
           </div>
         </div>
         </>

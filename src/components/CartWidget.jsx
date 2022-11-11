@@ -10,7 +10,7 @@ export default function CartWidget() {
   };
   return (
     <>
-      <Link to="/cart" size="large" aria-label="show 0 new items" color="white">
+      <Link to="/checkout" size="large" aria-label="show 0 new items" color="white">
         <Badge badgeContent={0} color="error">
           <ShoppingCartIcon onClick={seeCart} />
         </Badge>

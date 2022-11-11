@@ -4,16 +4,14 @@ import { Link, useParams } from "react-router-dom";
 import "./ItemListContainer";
 import { productosHC } from "./data.js";
 import ItemList from "./ItemList";
-export default function ItemListContainer({ greeting }) {
+export default function ItemListContainer() {
   const { idcategory } = useParams();
 
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
     const productosPromise = new Promise((res, rej) => {
-      setTimeout(() => {
-        res(productosHC);
-      }, 2000);
+      setTimeout(() => {res(productosHC);}, 2000);
     });
 
     productosPromise.then((res) => {

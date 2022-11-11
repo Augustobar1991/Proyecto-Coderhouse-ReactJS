@@ -5,7 +5,6 @@ import React from "react";
 import BodyApp from "./components/BodyApp";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import CartWidget from "./components/CartWidget";
 import ItemListContainer from "./components/ItemListContainer";
 import Checkout from "./components/Checkout";
 import Contacto from "./components/Contacto";
@@ -27,7 +26,8 @@ export default function App() {
         <Route path="/item/:iditem" element={<ItemDetailContainer />} />
       </Routes>
       {/* PONGO COMPONENTES QUE QUIERO QUE ESTEN EN TODAS LAS RUTAS ABAJO DE TODO*/}
-      <BodyApp />
+      {/* <BodyApp /> */}
+      <BodyApp/>
       <Footer />
     </BrowserRouter>
   );

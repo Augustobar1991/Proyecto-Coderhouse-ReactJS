@@ -23,7 +23,7 @@ export default function ItemCount({ ini, max, addItem}) {
             {count}
             <Button className="botonn" variant="outlined" onClick={sumar}>+</Button>
       </div>
-      <Button variant="contained" onClick={() => addItem(count)}>AGREGAR</Button>
+      <Button variant="outlined" onClick={() => addItem(count)}>AGREGAR</Button>
       
     </div>
   );
