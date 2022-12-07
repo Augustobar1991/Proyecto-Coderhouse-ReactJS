@@ -32,8 +32,7 @@ export default function Contacto(props) {
                 <a  href="tel:+5493454214174" ><p>3454166220</p></a>
             </li>
             <li><i className="fas fa-envelope mt-4 fa-2x"></i>
-            <a target='_blank' href={'contacto@lacasadelasllantas.com'}><p>contacto@lacasadelasllantas.com</p></a>
-              {/* //  <a href="contacto@lacasadelasllantas.com" target="_blank"><p>contacto@lacasadelasllantas.com</p></a> */}
+            <a href={'contacto@lacasadelasllantas.com'}><p>contacto@lacasadelasllantas.com</p></a>
             </li>
         </ul>
       </div>
