@@ -1,0 +1,127 @@
+.contactop {
+    position: relative;
+    /* top: -3vh; */
+    font-size: 30px;
+    color: rgba(255, 0, 0, 0.7);
+    font-weight: 600;
+    font-style: italic;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+.lineacontacto {
+    position: relative;
+    top: -3vh;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 0, 0, 0.7);
+    z-index: 50;
+}
+
+.ubi {
+    padding-top: 2rem;
+    padding-bottom: 15px;
+}
+
+#contacto{
+    margin: 20px;
+}
+
+.contacto__mapa{
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.contacto__mapa div{
+    width: 100%;
+    height: 100%;
+}
+
+.espacioubi ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.espacioubi ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.espacioubi ul li a{
+    padding: 10%;
+    color: rgb(171, 9, 9);
+    font-size: 1.1vw;
+}
+
+.fa, .fas {
+    display: flex;
+    align-items: center;
+}
+
+.fab {
+    font-size: 3.5vw;
+    width: 70%;
+    color: #fff;
+  }
+  .fab:hover {
+    transform: translateY(-8px) scale(1.2);
+    transition: all 0.3s;
+  }
+  
+  .fa-envelope:hover {
+    color: #0c1d68;
+    transform: translateY(-8px) scale(1.4);
+    transition: all 0.3s;
+  }
+  
+  .fa-map-marker-alt:hover {
+    color: #1a680c;
+    transform: translateY(-8px) scale(1.4);
+    transition: all 0.3s;
+  }
+  
+  .fa-phone:hover {
+    color: #0c5168;
+    transform: translateY(-8px) scale(1.4);
+    transition: all 0.3s;
+  }
+  
+  .instagram:hover {
+    color: #e120e4!important;
+  }
+  
+  .facebook:hover {
+    color: #0c2698!important;
+  }
+  
+  .whatsapp:hover {
+    color: #35b81e!important;
+  }
+
+  @media (max-width: 700px) {
+    .h2-responsive {
+        font-size: 4.5vw;
+    }
+    .texto {
+        font-size: 4.5vw;
+    }
+    .ubi {
+        font-size: 20px;
+    }
+    .espacioubi {
+        padding-top: 3vw;
+    }
+    .espacioubi ul li a{
+        font-size: 2.1vw;
+    }
+    .fa, .fas {
+        font-size: 4.1vw;
+    }
+}
+

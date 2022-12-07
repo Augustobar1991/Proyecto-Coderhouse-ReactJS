@@ -1,148 +1,131 @@
-import Tooltip from "@mui/material/Tooltip";
-import MenuIcon from "@mui/icons-material/Menu";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import * as React from "react";
-import CartWidget from "./CartWidget";
-import "../App.css";
-import { Link } from "react-router-dom";
-
-
-const pages = [
-  { label: "Inicio", link: "/" },
-  { label: "18", link: "/category/18" },
-  { label: "17", link: "/category/17" },
-  { label: "16", link: "/category/16" },
-  { label: "15", link: "/category/15" },
-  { label: "Checkout", link: "/checkout" },
-  { label: "Contacto", link: "/contacto" },
-];
-const settings = [
-  { label: "Perfil", link: "#Perfil" },
-  { label: "Cuenta", link: "#Cuenta" },
-  { label: "Desloguearte", link: "#Desloguearte" },
-];
-
-// const subItemAuto = [
-//   { label: "Peugeot 308", link: "#308" },
-//   { label: "Gol Trend", link: "#gol" },
-
-export default function Navmui() {
+import MenuIcon from '@mui/icons-material/Menu';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
+import Logo from '../multimedia/image/icon.png';
+import '../styles/Navbar.css';
+import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
+import { cartContext } from '../context/CartContextComponent';
+export default function Navbar() {
+  const { cart } = React.useContext(cartContext);
+  const [cant, setCant] = React.useState(0);
+  React.useEffect(() => {
+    setCant(cart.reduce((acc, item) => acc + item.quantity, 0));
+  }, [cart]);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  const pages = [
+    {
+      id: 1,
+      html: (
+        <Link to="/">
+          <img className="btnIndex" src={Logo} alt={'logoApp'}  />
+        </Link>
+      ),
+    },
+    {
+      id: 2,
+      html: (
+        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+          Inicio
+        </Link>
+      ),
+    },
+    {
+      id: 3,
+      html: (
+        <Link to="/dimension/18" style={{ color: 'white', textDecoration: 'none' }}>
+          Llantas 18
+        </Link>
+      ),
+    },
+    {
+      id: 4,
+      html: (
+        <Link to="/dimension/17" style={{ color: 'white', textDecoration: 'none' }}>
+          Llantas 17
+        </Link>
+      ),
+    },
+    {
+      id: 5,
+      html: (
+        <Link to="/dimension/16" style={{ color: 'white', textDecoration: 'none' }}>
+          Llantas 16
+        </Link>
+      ),
+    },
+    {
+    id: 6,
+      html: (
+        <Link to="/dimension/15" style={{ color: 'white', textDecoration: 'none' }}>
+          Llantas 15
+        </Link>
+      ),
+    },
+    {
+      id: 7,
+        html: (
+          <Link to="/contacto" style={{ color: 'white', textDecoration: 'none' }}>
+            Contacto
+          </Link>
+        ),
+      },
+  ];
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-        <AppBar position="static">
-          <Container style={{ backgroundColor: "rgb(33, 33, 33)" }} maxWidth="xl">
-            <Toolbar disableGutters>
-              <Link
-                href=""
-                underline="none"
-                sx={{
-                  mr: 2,
-                  display: { xs: "none", md: "flex" },
-                }}
-              >
-                <img className="nav-logo" src="../multimedia/image/icon.png" alt="La casa de las llantas" width="55" height="55" />
-              </Link>
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                  color="inherit"
-                >
-                  <MenuIcon />
-                </IconButton>
+    <AppBar style={{ background: 'rgb(33, 33, 33)' }} className="navbar" position="static">
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton size="large" aria-label="account of current user" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
+              <MenuIcon />
+            </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.label} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <Link to={page.link}>{page.label}</Link>
-                  </Typography>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.html}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            <img className="nav-logo" src="../multimedia/image/icon.png" alt="La casa de las llantas" width="55" height="55" />
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page.label}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-              <Link to={page.link}>{page.label}</Link>
+              <Button key={page.id} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+                {page.html}
               </Button>
             ))}
           </Box>
-           <Box>
-           <Tooltip title="Cart">
-               <IconButton sx={{ my: 2, color: "white", display: "block" }}>
-                 <CartWidget />
-               </IconButton>
-             </Tooltip>
-           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-          </Box>
+          {cart.length ? <CartWidget cant={cant} /> : ''}
         </Toolbar>
       </Container>
     </AppBar>

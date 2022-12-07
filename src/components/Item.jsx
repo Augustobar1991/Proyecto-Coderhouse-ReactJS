@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/item.css";
+import "../styles/Item.css";
 
 export default function Item({ item }) {
   return (
@@ -13,7 +13,7 @@ export default function Item({ item }) {
       <Card className="card" sx={{ maxWidth: 250 }}>
         <CardMedia component="img" height="350" src={item.imagen} alt="llantas" />
         <CardContent>
-          <Typography variant="h6" component="div">{item.name}</Typography>
+          <Typography variant="h6" component="div">{item.nombre}</Typography>
           <Typography variant="body2" color="text.secondary">
             {`Dimension: ${item.dimension}`}
           </Typography>
@@ -26,10 +26,11 @@ export default function Item({ item }) {
         </CardContent>
         <div className='botoncomprar'>
           <Button variant="outlined">
-            <Link to={"/item/" + item.id}>Ver detalles</Link>
+            <Link to={"/productos/" + item.id}>Ver producto</Link>
           </Button>
         </div>
       </Card>
     </div>
   )
 }
+
