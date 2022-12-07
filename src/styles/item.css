@@ -1,46 +1,46 @@
 .bordeitem{
-    border: 3px solid red;
-    margin: 10px;
-    border-radius: 20px;
-    color: #fff;
-    background-color: rgb(14, 14, 14);
+  border: 3px solid red;
+  margin: 10px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: rgb(14, 14, 14);
 }
 
 .itemcart{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 .botoncomprar{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .css-103chds-MuiPaper-root-MuiCard-root{
-  border-radius: 10px!important;
-  max-width: 270px!important;
+border-radius: 10px!important;
+max-width: 270px!important;
 }
 
 .MuiPaper-root.MuiPaper-elevation {
-    background-color: lightgray;
-  }
-  
-  .card {
-    margin: 20px;
-    height: 550px;
-  }
-  
-  .showDetail {
-    color: white;
-    background-color: black;
-  }
+  background-color: lightgray;
+}
+
+.card {
+  margin: 20px;
+  height: 550px;
+}
+
+.showDetail {
+  color: white;
+  background-color: black;
+}
 
 .botonn{
-    min-width:auto!important;
-    padding: 3px 5px!important;
+  min-width:auto!important;
+  padding: 3px 5px!important;
 }
 
 .botonitemcart div button{
-    margin: 7px;
+  margin: 7px;
 }

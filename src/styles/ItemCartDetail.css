@@ -1,0 +1,31 @@
+.accordionContainer {
+  width: 30rem;
+}
+.itemContainer {
+  display: flex;
+  justify-content:space-around;
+  border-bottom-width: 20px;
+}
+.titleCheckout{
+  display:flex;
+  justify-content:center;
+  color: aliceblue;
+}
+.itemContainer .imgItem {
+  width: 30%;
+  height: 30%;
+  margin: auto 0;
+}
+.itemContainer .productDetail ul {
+  padding: 0;
+  list-style: none;
+}
+.itemContainer .productDetail ul .detail {
+  font-size: small;
+  margin-left: 20px;
+  line-height: 2rem;
+}
+.totalPrice {
+  text-align: right;
+  font-size: large;
+}

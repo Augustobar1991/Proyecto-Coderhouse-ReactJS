@@ -1,36 +1,62 @@
-import React from "react";
-import ItemCount from "./ItemCount";
-import Button from '@mui/material/Button';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import React, { useContext, useEffect, useState } from 'react';
+import { Watch } from 'react-loader-spinner';
+import { cartContext } from '../context/CartContextComponent';
+import ItemCount from './ItemCount';
 import "../styles/body.css";
 
-export default function ItemDetail({ producto }) {
-  function addItem(x) {
-    alert("El total saldria: " + x * producto.precio);
-  }
+export default function ItemDetail({ item }) {
+  const { addItem } = useContext(cartContext);
+  const onAdd = (quantity) => {
+    addItem(item, quantity);
+  };
+  const [renderStock, setRenderStock] = useState(item.stock);
+  useEffect(() => {
+    setRenderStock(item.stock);
+  }, [item]);
+  const renderizarStock = (updateStock) => {
+    setRenderStock(updateStock);
+  };
   return (
-    <div className="cartitem">
-      {producto.id ? (
+    <div>
+      {item.id ? (
         <>
-            <h1 className="tituloh1">{producto.name}</h1>
-            <div className="idprod">cod. de prod. {producto.id} </div>
-        <div className="cartsubitem">
-          <div><img src={producto.imagen} alt="" /></div>  
-            <div className="cartdetalletem">
-              <ItemCount ini={1} max={producto.stock} addItem={addItem} />
-              <div>{producto.stock} disponible</div> 
-              <div>              
-                <div>Tamaño: {producto.dimension}</div>  
-              </div>
-            <div>${producto.precio}</div>  
+          <div className="itemContainer">
+            <Card sx={{ width: '80vw' }}>
+              <h1 className="tituloh1">{item.name.toUpperCase()}</h1>
+              <div className="idprod">cod. de prod. {item.id} </div>
+              <CardMedia component="img" height="450" sx={{ margin: 'auto', width: 300 }} image={item.img} alt="llantas" />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  {`Dimension: ${item.dimension}`}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {`Categoria: ${item.category}`}
+                </Typography>
+                <Typography variant="h6" color="text.primary">
+                  {`Precio: $${item.price}`}
+                </Typography>
+                <Typography>
+                  <b>Stock: </b>
+                  {renderStock} unidades
+                </Typography>
+                <Typography>
+                  <b>Descripción:</b> {item.descripcion}
+                </Typography>
+                <ItemCount renderizarStock={renderizarStock} initial={1} item={item} onAdd={onAdd} />
+              </CardContent>
+            </Card>
           </div>
-          <div className="cartpreciotem">Total: ${producto.precio}</div>
-          <div className="cartbuytem">
-              <Button variant="outlined" color="success">Continuar compra</Button>
-          </div>
-        </div>
         </>
       ) : (
-        <>Loading...</>
+        <>
+          <div className="watchContainer">
+            <Watch height="250" width="250" radius="48" color="red" ariaLabel="watch-loading" wrapperStyle={{}} wrapperClassName="" visible={true} />
+          </div>
+        </>
       )}
     </div>
   );
